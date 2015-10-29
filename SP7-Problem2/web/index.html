@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-mocks.js"></script>
+     <script src="app.js"></script>
+    <title></title>
+  </head>
+  <body ng-app="examApp">
+    <h1>Grades</h1>
+    <table class="table" ng-controller="ExamController">
+        <thead>
+            <tr>
+                <td></td>
+                <td ng-repeat="course in studentsInfo.allCourses">{{course.courseName}}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="student in studentsInfo.students">
+                <td>{{student.name}}</td>
+                <td ng-repeat="grade in student.grades">{{grade.grade}}</td>
+            </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
