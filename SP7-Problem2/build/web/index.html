@@ -11,19 +11,6 @@
   </head>
   <body ng-app="examApp">
     <h1>Grades</h1>
-    <table class="table" ng-controller="ExamController">
-        <thead>
-            <tr>
-                <td></td>
-                <td ng-repeat="course in studentsInfo.allCourses">{{course.courseName}}</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="student in studentsInfo.students">
-                <td>{{student.name}}</td>
-                <td ng-repeat="grade in student.grades">{{grade.grade}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <student-grades></student-grades> 
   </body>
 </html>
